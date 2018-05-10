@@ -1,0 +1,10 @@
+# Airflow connections
+airflow:
+  - id: private_key
+    type: ssh
+    extra: "{ \"key_file\": \"/usr/local/airflow/.ssh/id_rsa\" }"
+
+# During deployment, we need to add the private key to each host:
+hosts:
+    - name: ETL_HOST
+      string: [put the host address here]
